@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "95d206fc-d9ea-4c42-a61a-d57afbe43820",
+		"name": "customer-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "customer-service",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-service-post-request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", () => {\r",
+							"  pm.response.to.have.status(\"Created\");\r",
+							"});\r",
+							"\r",
+							"// pm.test(\"Customer Insertion\", () => {\r",
+							"//   const responseJson = pm.response.json();\r",
+							"//   pm.expect(responseJson.form.email).to.eql(\"{{email}}\");\r",
+							"//   pm.expect(responseJson.form.firstName).to.eql(\"{{firstName}}\");\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\": \"{{email}}\",\r\n        \"firstName\": \"{{firstName}}\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-service-put-request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// pm.test(\"body matches string\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.include(\"rowsAffected=1\");\r",
+							"// });\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\":\"shruthi@gmal.com\",\r\n    \"firstName\": \"shruthi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer/200",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-service-delete-request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "customer-service-get-by-id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body contains CustomerId\",() => {\r",
+							"  pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"});\r",
+							"\r",
+							"console.log(typeof pm.response.json().customerId);\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Body is string\", function () {\r",
+							"  pm.response.to.have.body({\r",
+							"    \"customerId\": 21,\r",
+							"    \"email\": \"roshni@gmail.com\",\r",
+							"    \"firstName\": \"roshni\"\r",
+							"});\r",
+							"});\r",
+							"\r",
+							"\r",
+							"// if (pm.response.json().customerId) {\r",
+							"//   console.log(\"id was found!\");\r",
+							"//    console.error(\"id does not exist\")\r",
+							"//   // do something\r",
+							"\r",
+							"// } else if (!pm.response.json().customerId){\r",
+							"   \r",
+							"//   console.log(\"no id ...\");\r",
+							"//   //do something else\r",
+							"// }\r",
+							"// else{\r",
+							"\r",
+							"// }\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer-by-id/21",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer-by-id",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Id-not-exist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Id does not exist\",() => {\r",
+							"    console.log(pm.response.text())\r",
+							"//   pm.expect(pm.response.text()).to.include(\"customerId\");\r",
+							"  if(pm.response.text().customerId) {\r",
+							"      console.log(\"id exist\")\r",
+							"  }\r",
+							"  else{\r",
+							"      console.error(\"id does not exist\");\r",
+							"  }\r",
+							" \r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response in empty\", function () {\r",
+							"    pm.expect(pm.response.text()).to.eql('');\r",
+							"});\r",
+							"  \r",
+							"\r",
+							"// pm.test(\"Response in empty array\", function () {\r",
+							"//     pm.expect(pm.response.json()).to.eql([]);\r",
+							"// });\r",
+							"// let res= pm.response.json;\r",
+							"// console.log(res);\r",
+							"// pm.test(\"You have an error in your SQL syntax\", function () {\r",
+							"//     pm.expect(pm.response.json()).to.contain('JSONError: Unexpected token '<' at 1:1 <!DOCTYPE html> ^');\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer-by-id/2111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer-by-id",
+						"2111"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Id-Blank",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Id is not defined\", function () {\r",
+							"if(pm.response.text.customerId == null)\r",
+							"{\r",
+							"    console.log(\"id not defined\");\r",
+							"}\r",
+							"});\r",
+							"// pm.test(\"You have an error in your SQL syntax\", function () {\r",
+							"//     pm.expect(pm.response.json()).to.contain('You have an error in your SQL syntax');\r",
+							"// });\r",
+							"// pm.test(\"Response in empty array\", function () {\r",
+							"//     pm.expect(pm.response.text()).to.eql('');\r",
+							"// });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer-by-id/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer-by-id",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "duplicate-check",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Customer email is a duplicate entry\", function () {\r",
+							"    pm.expect(jsonData.email).to.contain('raksha@gmail.com');\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"email\":\"{{email}}\",\r\n        \"firstName\": \"{{firstName}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

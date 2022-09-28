@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="customer-service" tests="8" time="0.156">
+  <testsuite name="customer-service" id="1ee0840d-f561-4c49-96e8-630228e5c59a" timestamp="2022-09-27T05:45:59.308Z" tests="1" failures="0" errors="0" time="0.029">
+    <testcase name="Status code is 200" time="0.029" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="customer-service-post-request" id="ebce786d-c075-45fa-adf6-c2ef3ea33425" timestamp="2022-09-27T05:45:59.308Z" tests="2" failures="0" errors="0" time="0.017">
+    <testcase name="Status code is 201" time="0.017" classname="CustomerService"/>
+    <testcase name="Status code name has string" time="0.017" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="customer-service-put-request" id="5966616f-0fe2-4c92-aabd-64bdcd250449" timestamp="2022-09-27T05:45:59.308Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Status code is 200" time="0.025" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="customer-service-delete-request" id="614fb98e-edb2-44c0-9c6f-6f91e5a1155a" timestamp="2022-09-27T05:45:59.308Z" tests="1" failures="0" errors="0" time="0.017">
+    <testcase name="Status code is 200" time="0.017" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="customer-service-get-by-id" id="23ab2277-ab74-463b-aa4d-5b7884bff10e" timestamp="2022-09-27T05:45:59.308Z" tests="2" failures="0" errors="0" time="0.015">
+    <testcase name="Body contains CustomerId" time="0.015" classname="CustomerService"/>
+    <testcase name="Body is string" time="0.015" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="Id-not-exist" id="6c05a38f-c934-40ab-b3e1-21f1d6fbc407" timestamp="2022-09-27T05:45:59.308Z" tests="2" failures="0" errors="0" time="0.017">
+    <testcase name="Id does not exist" time="0.017" classname="CustomerService"/>
+    <testcase name="Response in empty" time="0.017" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="Id-Blank" id="0641bcd0-7686-442c-991e-9f42fb03e70a" timestamp="2022-09-27T05:45:59.308Z" tests="2" failures="0" errors="0" time="0.011">
+    <testcase name="Status code is 404" time="0.011" classname="CustomerService"/>
+    <testcase name="Id is not defined" time="0.011" classname="CustomerService"/>
+  </testsuite>
+  <testsuite name="duplicate-check" id="0cdb9477-3589-4dae-b548-a82df211282e" timestamp="2022-09-27T05:45:59.308Z" tests="1" failures="0" errors="0" time="0.025">
+    <testcase name="Customer email is a duplicate entry" time="0.025" classname="CustomerService"/>
+  </testsuite>
+</testsuites>

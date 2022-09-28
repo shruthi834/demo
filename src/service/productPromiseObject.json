@@ -1,0 +1,68 @@
+[
+    {
+        "id": 6,
+        "name": "oneplus ",
+        "price": 98000,
+        "category": "TV"
+    },
+    {
+        "id": 7,
+        "name": "oneplus nord ",
+        "price": 27000,
+        "category": "mobile"
+    },
+    {
+        "id": 8,
+        "name": "samsung ",
+        "price": 22000,
+        "category": "mobile"
+    },
+    {
+        "id": 14,
+        "name": "sony",
+        "price": 980000,
+        "category": "TV"
+    },
+    {
+        "id": 15,
+        "name": "dummy",
+        "price": 10000,
+        "category": "dummy"
+    },
+    {
+        "id": 17,
+        "name": "BPL",
+        "price": 85000,
+        "category": "TV"
+    },
+    {
+        "id": 18,
+        "name": "dummy",
+        "price": 10000,
+        "category": "dummy"
+    },
+    {
+        "id": 19,
+        "name": "sony",
+        "price": 980000,
+        "category": "TV"
+    },
+    {
+        "id": 27,
+        "name": "dummy",
+        "price": 10000,
+        "category": "dummy"
+    },
+    {
+        "id": 29,
+        "name": "dummy",
+        "price": 10000,
+        "category": "dummy"
+    },
+    {
+        "id": 34,
+        "name": "LG",
+        "price": 980000.0098,
+        "category": "washing machine"
+    }
+]
