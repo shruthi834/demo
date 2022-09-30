@@ -6,16 +6,16 @@
     "express": "^4.18.1",
     "express-validator": "^6.14.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.4",
-    "typescript": "^4.8.2"
+    "sequelize": "^6.21.4"
   },
   "name": "expressorm",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "jasmine-ts \"./spec/**/*.spec.ts\"",
-    "api-test": "newman run --verbose ./api-tests/customer-service.postman_collection.json -d ./api-tests/test-data.json --ignore-redirects --reporters \"cli,junit,htmlextra\" --reporter-junit-export newman/myreport.xml --reporter-htmlextra-export newman/newman_result.html"
-    
+    "api-test": "newman run --verbose ./api-tests/customer-service.postman_collection.json -d ./api-tests/test-data.json --ignore-redirects --reporters \"cli,junit,htmlextra\" --reporter-junit-export newman/myreport.xml --reporter-htmlextra-export newman/newman_result.html",
+    "build": "tsc",
+    "watch-ts": "tsc -w"
   },
   "keywords": [],
   "author": "",
@@ -25,13 +25,14 @@
     "@types/chai": "^4.3.3",
     "@types/chai-spies": "^1.0.3",
     "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
+    "@types/express": "^4.17.14",
     "@types/jasmine": "^4.0.0",
     "@types/supertest": "^2.0.12",
     "jasmine": "^3.99.0",
     "jasmine-ts": "^0.3.3",
     "nodemon": "^2.0.19",
     "supertest": "^6.2.4",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
   }
 }

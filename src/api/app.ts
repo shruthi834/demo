@@ -3,8 +3,8 @@ import {Server,createServer} from 'http';
 import cors from 'cors';
 import { CommonRoutes } from './routes/common.routes';
 import { ProductRoutes } from './routes/products.routes';
-import * as winston from 'winston';// for logging 
-import * as expressWinston from 'express-winston';
+// import * as winston from 'winston';// for logging 
+// import * as expressWinston from 'express-winston';
 import { CustomerRoutes } from './routes/customers.routes';
 import { OrderRoutes } from './routes/orders.routes';
 import { ItemRoutes } from './routes/item.routes';
@@ -28,18 +28,18 @@ app.use(cors());
 
 //logger configuration
 
-const loggerOptions: expressWinston.LoggerOptions = {
+// const loggerOptions: expressWinston.LoggerOptions = {
 
-        transports:[new winston.transports.Console()],
-        format:  winston.format.combine(
-                winston.format.json(),
-                winston.format.prettyPrint(),
-                winston.format.colorize({all:true})
+//         transports:[new winston.transports.Console()],
+//         format:  winston.format.combine(
+//                 winston.format.json(),
+//                 winston.format.prettyPrint(),
+//                 winston.format.colorize({all:true})
 
-        ) 
-};
+//         ) 
+// };
 
-app.use(expressWinston.logger(loggerOptions))
+// app.use(expressWinston.logger(loggerOptions))
 
 //end logger configuration
 
